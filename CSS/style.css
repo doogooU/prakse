@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+
+}
+:root {
+  /* ... */
+  --BACKGROUND: #343434;
+  --MAIN_TEXT: #ccc;
+  --BLACK_TEXT: #212121;
+}
+
+
+body {
+  background-color: var(--BACKGROUND);
+  /* background-color: #333; */
+  /* color: #ccc;  */
+  color: var(--MAIN_TEXT); 
+  height: 100vh; 
+  width: 100vw; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: #803b3b solid 100px; */
+  flex-direction: column;
+  gap: calc(2rem + 5vh);
+    cursor: url("../IMG/normalCursor.png"), auto;
+}
+
+h1 {
+    font-size: calc(1.5vh + 1.5vw + 5px);
+    transition: scale .5s;
+    /* cursor: ; */
+}
+h1:hover {
+  cursor: none;
+    scale: 1.2;
+}
+
+p {
+    font-size: calc(1.5vh + 1.5vw + 10px);
+
+}
+
+a {
+  color: var(--BLACK_TEXT);
+  text-decoration: none;
+}
+
+/* BUTTONS */
+.choices {
+  display: flex;
+  font-size: calc(1vh + 1vw + 10px);
+  flex-direction: row;
+  gap: calc(2rem + 5vw);
+}
+
+.choices button {
+    height: calc(50px + 1vh);
+    width: calc(150px + 5vw);
+    font-size: calc(1vh + 1vw + 10px);
+    /* font-weight: ; */
+    /* rad */
+    border-radius: 30px;
+    background-color: rgb(160, 123, 0);
+    border: none;
+    transition: background-color .4s;
+}
+.choices a:last-child:hover button:last-child:hover {
+    background-color: rgb(245, 215, 215);
+    cursor: url("../IMG/godCursor.png"), auto;
+}
+.choices a:first-child:hover button:first-child:hover {
+    background-color: rgb(128, 33, 33);
+    cursor: url("../IMG/fonkCursor.png"), auto;
+}
+.choices button:active {
+    /* background-color: rgb(199, 199, 59); */
+    scale: .9;
+}
+
+/* .choices button  */
+.spawnedImg {
+  height: calc(50px + 1vh);
+  position: absolute;
+  /* top: -2%; */
+  top: 5%;
+  pointer-events: none;
+  /* animation: fallingImgAnim, ; */
+  z-index: -5;
+}
+
+@keyframes fallingImgAnim {
+  0% {
+    top: -1%
+  } 100% {
+    top: 105%
+  }
+}
+
+/* .changeCursorEvil {
+  cursor: url("../IMG/scary.png"), auto;
+}
+.changeCursorGood {
+  cursor: url("path/to/your-cursor.png"), auto;
+} */
+
+.result {
+  width: 60%;
+  /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
+  /* text-shadow: 
+    0 0 5px #000000,        
+    0 0 10px rgb(204, 203, 203),       
+    0 0 20px rgb(161, 202, 218),       
+    0 0 30px #a8bdd4,    
+    0 0 10px #ffffffc2;     */
+}
+/* 
+.resultAreaBackground {
+  
+ display: flex;
+ justify-content: center;
+} */
